@@ -1,0 +1,12 @@
+[
+  {
+    "id": "sku-001",
+    "nombre": "Camiseta ADM",
+    "descripcion": "Camiseta de algodón orgánico con logo.",
+    "precio": 12999,
+    "moneda": "ARS",
+    "imagen": "/tienda/img/camiseta.jpg",
+    "activo": true,
+    "tags": ["ropa", "logo"]
+  }
+]

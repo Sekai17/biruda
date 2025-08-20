@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADM · Productos</title>
+  <style>
+    body{font-family:system-ui,ui-sans-serif;padding:16px;max-width:1100px;margin:auto}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{border:1px solid #e5e7eb;padding:8px}
+    input,textarea{width:100%}
+    .row{display:flex;gap:8px;flex-wrap:wrap}
+    .row>*{flex:1}
+    .danger{background:#fee2e2}
+  </style>
+</head>
+<body>
+  <h1>ADM · Productos</h1>
+  <details open>
+    <summary>Conexión a GitHub</summary>
+    <div class="row">
+      <label>Usuario<input id="ghUser" placeholder="usuario"/></label>
+      <label>Repo<input id="ghRepo" placeholder="repo"/></label>
+      <label>Branch<input id="ghBranch" placeholder="main" value="main"/></label>
+    </div>
+    <div class="row">
+      <label>Ruta JSON<input id="ghPath" value="_data/productos.json"/></label>
+      <label>Token (PAT)<input id="ghToken" placeholder="ghp_***"/></label>
+    </div>
+    <button id="btnLoad">Cargar productos</button>
+    <button id="btnSave" class="danger">Guardar cambios → Commit</button>
+    <small>El token se guarda sólo en <code>localStorage</code> del navegador.</small>
+  </details>
+
+  <h2>Listado</h2>
+  <table id="tabla">
+    <thead>
+      <tr><th>ID</th><th>Nombre</th><th>Descripción</th><th>Precio (centavos)</th><th>Moneda</th><th>Imagen</th><th>Activo</th><th>Tags (,)</th><th>Acciones</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Nuevo producto</h2>
+  <div class="row">
+    <input id="n_id" placeholder="sku-002"/>
+    <input id="n_nombre" placeholder="Nombre"/>
+    <input id="n_precio" type="number" placeholder="12999"/>
+  </div>
+  <div class="row">
+    <input id="n_moneda" placeholder="ARS" value="ARS"/>
+    <input id="n_imagen" placeholder="/tienda/img/producto.jpg"/>
+    <input id="n_tags" placeholder="ropa,logo"/>
+  </div>
+  <textarea id="n_desc" placeholder="Descripción"></textarea>
+  <label><input type="checkbox" id="n_activo" checked/> Activo</label>
+  <button id="btnAdd">Agregar</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

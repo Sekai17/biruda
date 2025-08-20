@@ -1,0 +1,12 @@
+---
+layout: default
+title: Tienda
+---
+<link rel="stylesheet" href="/tienda/styles.css">
+<h1>Tienda</h1>
+<div class="grid">
+  {%- assign productos = site.data.productos | where: "activo", true -%}
+  {%- for producto in productos -%}
+    {% include plantilla-producto.html producto=producto %}
+  {%- endfor -%}
+</div>

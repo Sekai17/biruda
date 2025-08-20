@@ -1,0 +1,15 @@
+title: "Tienda ADM"
+url: "" # https://<TU_USUARIO>.github.io/<TU_REPO> si es project pages
+baseurl: "" # o "/<TU_REPO>" si es project pages
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+collections: []
+exclude:
+  - adm
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
