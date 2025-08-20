@@ -1,0 +1,10 @@
+<div class="card">
+  <img alt="{{ producto.nombre }}" src="{{ producto.imagen }}" loading="lazy"/>
+  <div class="body">
+    <h3>{{ producto.nombre }}</h3>
+    <p>{{ producto.descripcion }}</p>
+    <strong>
+      {{ producto.precio | divided_by: 100.0 | plus: 0 | round: 2 }} {{ producto.moneda }}
+    </strong>
+  </div>
+</div>
